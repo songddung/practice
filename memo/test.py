@@ -8,6 +8,8 @@ for i in range(n) :
             if arr[i] + arr[j] + arr[k] > m :
                 continue
             else :
+                ### max(arg1, arg2)
+                # arg1과 arg2를 비교하여 큰 값을 리턴
                 max_num = max(max_num, arr[i] + arr[j] + arr[k])
             
 print(max_num)
