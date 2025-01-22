@@ -1,15 +1,34 @@
-n, m = map(int, input().split())
-arr = list(map(int, input().split()))
-max_num = 0
+arr = []
+select = []
+select_num = []
+L = int(input())
+for i in range(L) :
+    arr.append(0)
+N = int(input())
 
-for i in range(n) :
-    for j in range(i+1, n) :
-        for k in range(j+1, n) :
-            if arr[i] + arr[j] + arr[k] > m :
-                continue
+
+for i in range(1, N+1) :
+    
+    select = list(map(int, input().split()))
+  
+    if i == 1 :
+        for j in range(select[0],select[1]+1):
+            arr[j-1] = i
+    else :
+        for k in range(select[0], select[1]+1) :
+            if arr[k-1] == 0 :
+                print(f'k:{k}')
+                arr[k-1] = i
+                print(arr)
             else :
-                ### max(arg1, arg2)
-                # arg1과 arg2를 비교하여 큰 값을 리턴
-                max_num = max(max_num, arr[i] + arr[j] + arr[k])
-            
-print(max_num)
+                continue
+    select_num.append(select)
+
+
+
+
+index_num = []
+for z in range(1, N+1) :
+    index_num.append(arr.count(int(z)))
+    
+print(max(index_num))
