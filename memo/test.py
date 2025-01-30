@@ -28,7 +28,18 @@ for i in range(1, N+1) :
 
 
 index_num = []
+# 많이 받은 사람
+# select_num 리스트에 각 번호를 세서
+# 가장 많은사람 동점이 있을 경우 인덱스가 낮은 사람
+index1 = 0
 for z in range(1, N+1) :
-    index_num.append(arr.count(int(z)))
-    
-print(max(index_num))
+
+    pass
+
+# 많이 받을줄 알았던 사람
+# select_num 리스트에 하나씩 뽑아서 뒷번호에서 앞번호를 빼고 가장 큰사람
+# 동점이 있을 경우 인덱스가 낮은 사람
+prediction = []
+index2 = 0
+for i in range(N) :
+    pass
