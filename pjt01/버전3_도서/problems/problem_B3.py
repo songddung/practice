@@ -6,6 +6,7 @@ from gtts import gTTS
 from dotenv import load_dotenv
 
 
+
 load_dotenv()  # .env 파일을 읽어 환경 변수로 설정합니다.
 
 # 1. [ dotenv를 활용하여 알라딘 API 키 가져오기 ]
@@ -40,7 +41,7 @@ def save_books_to_json(books, filename, max_save=5):
         # 4.1 [ 책 정보에서 'description'이 있는 경우 book_list에 총 5개만 추가 ]
         if len(book_list) == 5 :
                 continue
-        if book.get('description') != None :
+        if book.get('description') != '' :
             book_list.append(book)
             
             
@@ -51,7 +52,7 @@ def save_books_to_json(books, filename, max_save=5):
         'book_list' : book_list
     }
     current_path = Path.cwd()
-    output_folder = current_path/'output'
+    output_folder = current_path/'pjt01'/'output'
     output_folder.mkdir(exist_ok=True)
     # 파일 경로 설정
     discounted_books_path = Path(output_folder/'korean_literature_books.json')
@@ -67,9 +68,6 @@ def save_books_to_json(books, filename, max_save=5):
 def create_tts_file(text, filename):
     # gTTS를 사용하여 입력 받은 text를 MP3 파일로 저장합니다.
     # 파일은 output/book_n.mp3 로 저장한다. (n은 숫자)
-    current_path = Path.cwd()
-    output_folder = current_path/'output'
-    output_folder.mkdir(exist_ok=True)
 
     tts = gTTS(text=text, lang = 'ko', slow = False)
     tts.save(filename)  # 음성 파일 저장  
@@ -79,7 +77,7 @@ def create_tts_file(text, filename):
 def process_korean_literature_books():
     # 6.1 [ fetch_books_by_topic()을 호출하여 '한국문학' 관련 도서를 검색 ]
     korea = fetch_books_by_topic('한국문학')['item']
-
+    
     
 
     # 6.2 [ save_books_to_json() 를 호출하여 5개의 도서 정보를 JSON으로 저장 및 저장된 데이터 가져오기 ]
@@ -90,7 +88,7 @@ def process_korean_literature_books():
     idex = 0
     for i, book in enumerate(books['book_list'], 1):
         # 6.3 [ create_tts_file 을 호출하여 제목과 요약 정보를 합쳐 음성 파일로 저장 ]
-        create_tts_file(book['description'],f'book_{i}.mp3')
+        create_tts_file(book['description'],f'./pjt01/output/book_{i}.mp3')
         idex += 1 
 
     # 6.4 [ 처리 완료 메시지 출력하기 ]
