@@ -40,7 +40,6 @@
 
 N = int(input())
 
-
 ar=[]
 check = 0
 for i in range((N//5)+1):
@@ -53,6 +52,7 @@ for i in range((N//5)+1):
 
 if check == 0 :
     print(-1)
+    exit()
 else :
     mn = sum(ar[0])
     for j in ar :
