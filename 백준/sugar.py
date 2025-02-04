@@ -9,37 +9,7 @@
 ### 2번 
 # 
 
-
-
-
-# if N < 5 :
-#     three_remain = N % 3
-#     if three_remain == 0 :
-#         bag = N // 3
-#     else :
-#         bag = -1
-# else :
-#     while True :
-#         five = N // 5
-#         five_remain = N % 5
-
-#         if five_remain == 0 :
-#             bag = five
-#         else :
-            
-#             for i in range(1, five+1):
-#                 # N - (5 * (i-1)) // 3
-#                 ii = (N - ((five-i)*5)) % 3
-#                 if ii % 3 == 0 :
-#                     five_i = five - i 
-#                     three_i = (N - (five_i*5)) // 3
-#                     bag = five_i+three_i
-#                     print(bag)
-#                     break
-#             break
-
 N = int(input())
-
 ar=[]
 check = 0
 for i in range((N//5)+1):
@@ -47,8 +17,6 @@ for i in range((N//5)+1):
     if a % 3 == 0 :
         ar.append([i, a//3])
         check = 1
-
-
 
 if check == 0 :
     print(-1)
