@@ -13,3 +13,4 @@ my_dog = Dog()
 my_dog.bark()  #
 
 # 부모 클래스(Animal) 메서드 사용 가능
+my_dog.eat()

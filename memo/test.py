@@ -44,11 +44,35 @@
 # for i in range(N) :
 #     pass
 
-ar = [1, 2, 3, 4, 4, 5]
-bucket = [0] * (max(ar) + 1) # max값이 들어갈 자리의 인덱스가 max - 1 이기 때문
+# ar = [1, 2, 3, 4, 4, 5]
+# bucket = [0] * (max(ar) + 1) # max값이 들어갈 자리의 인덱스가 max - 1 이기 때문
 
 
-for i in ar:
-    bucket[i] += 1
+# for i in ar:
+#     bucket[i] += 1
 
-print(bucket)
+# print(bucket)
+
+a = 1*1e10000
+print(a)
+
+
+
+
+import sys
+
+print(sys.maxsize)
+
+print(True + False)
+
+
+
+print(9 + 9 * 9 + 9*9*9 + 9*9*9*9)
+
+num = int(input())
+ar = [1, 11, 111, 1111]
+result = 0
+
+for i in ar :
+    result += num * i
+print(result)

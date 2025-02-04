@@ -1,7 +1,7 @@
 # 다중 상속
 class ParentA:
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.value_a = 'ParentA'
 
     def show_value(self):
