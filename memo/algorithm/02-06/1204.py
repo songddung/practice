@@ -6,7 +6,7 @@ N = int(input())
 for i in range(N):
     j = int(input())
     ar = list(map(int, input().split()))
-    arr = [0]*1000
+    arr = [0]*101
     for n in ar:
         arr[n] += 1
 
