@@ -1,0 +1,1 @@
+https://codingdog.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-pycharm-terminal%EC%9D%84-git-bash%EB%A1%9C-%EB%B0%94%EA%BF%94%EB%B4%85%EC%8B%9C%EB%8B%A4

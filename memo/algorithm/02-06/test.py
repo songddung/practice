@@ -73,4 +73,80 @@
 # if run + tri == 2: print("Baby Gin")
 # else: print("Lose")
 
-print(1 - (-1))
+# print(1 - (-1))
+
+arr = []
+arr2 = []
+
+# 빙고판 입력
+i = 0
+while i < 5:
+    arr.append(list(map(int, input().split())))
+    i += 1
+
+# 사회자가 부르는 수 입력
+j = 0
+while j < 5:
+    arr2.append(list(map(int, input().split())))
+    j += 1
+
+# 빙고 체크를 위한 변수
+bingo_count = 0
+called_numbers = {}
+
+# 사회자가 부르는 수를 순서대로 처리
+call_index = 0
+while call_index < 25:
+    number = arr2[call_index // 5][call_index % 5]
+    called_numbers[number] = True
+
+    # 빙고판에서 해당 숫자를 0으로 변경
+    for i in range(5):
+        for j in range(5):
+            if arr[i][j] == number:
+                arr[i][j] = 0
+
+    # 빙고 체크
+    # 가로 체크
+    for i in range(5):
+        all_zero = True
+        for j in range(5):
+            if arr[i][j] != 0:
+                all_zero = False
+                break
+        if all_zero:
+            bingo_count += 1
+
+    # 세로 체크
+    for j in range(5):
+        all_zero = True
+        for i in range(5):
+            if arr[i][j] != 0:
+                all_zero = False
+                break
+        if all_zero:
+            bingo_count += 1
+
+    # 대각선 체크
+    all_zero = True
+    for i in range(5):
+        if arr[i][i] != 0:
+            all_zero = False
+            break
+    if all_zero:
+        bingo_count += 1
+
+    all_zero = True
+    for i in range(5):
+        if arr[i][4 - i] != 0:
+            all_zero = False
+            break
+    if all_zero:
+        bingo_count += 1
+
+    # 빙고가 3개가 되면 결과 출력
+    if bingo_count >= 3:
+        print(call_index + 1)  # 몇 번째 수를 부른 후
+        exit()
+
+    call_index += 1
