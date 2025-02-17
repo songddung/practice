@@ -5,9 +5,8 @@ def solve():
     arr = [[-1]*n for _ in range(n)]
     delta = [(0, 1), (1, 0), (0, -1), (-1, 0)]
     d = 0
-
     row = col = 0
-    value = 1
+
     for i in range(1, n*n+1):
         arr[row][col] = i
 
