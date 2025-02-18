@@ -93,3 +93,52 @@
 #     result = solve()
 #     for i in result:
 #         print(*i)
+
+direct = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
+
+def solve():
+    n = int(input())
+    ar = [list(map(int, input().split())) for _ in range(n)]
+
+    r = 0
+
+    for i in range(n):
+        for j in range(n):
+            y, x = i, j
+            t = 1
+
+            while True:
+                f = False
+                mn = ar[y][x]
+
+                for k in range(4):
+                    dy, dx = y + direct[k][0], x + direct[k][1]
+
+                    if 0 <= dy < n and 0 <= dx < n:
+                        if ar[dy][dx] < mn:
+                            mn = ar[dy][dx]
+                            ndy, ndx = dy, dx
+                            f = True
+
+                if f:
+                    y, x = ndy, ndx
+                    t += 1
+                else:
+                    break
+
+            if t > r:
+                r = t
+
+    return r
+
+
+def main():
+    t = int(input())
+
+    for i in range(1, t + 1):
+        print(f"#{i}", solve())
+
+
+if __name__ == '__main__':
+    main()
