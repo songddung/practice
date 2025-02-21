@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>덕규탄생일</title>
+</head>
+<script>
+   const colors = ['#ff0000', '#0000ff', '#7322f5'];
+
+function changeBackgroundColor() {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+}
+
+setInterval(changeBackgroundColor, 100);
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function(){
+    //   like_button = document.querySelector(".like");
+
+    //   like_button.addEventListener("click", ()=>{
+    //   let like_count = document.querySelector(".like_count");
+    //   let count = Number(like_count.textContent)
+    //   like_count.textContent = count + 1;
+    // })
+
+    pepe1 = document.querySelector(".pepe1");
+    pepe2 = document.querySelector(".pepe2");
+    let check = 0
+    const toggleD = ()=>{
+      
+      if (check == 0){
+        pepe1.style.display = 'none';
+        pepe2.style.display = 'flex';
+        check = 1
+      } else {
+        pepe1.style.display = 'flex';
+        pepe2.style.display = 'none';
+        check = 0
+      }
+    };
+    setInterval(toggleD,200)
+  })
+  
+</script>
+<style>
+  .full{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+  }
+  .full_pepe{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .ducku{
+    border: 1px white solid;
+    width: 30vw;
+    height: 30vh;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: skyblue;
+    
+  } */
+
+  /* .like{
+    width: 5vw;
+    height: 5vh;
+
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+  } */
+
+</style>
+<body>
+  <div class="full">
+
+    <!-- <img src="https://random.imagecdn.app/500/150"> -->
+      <!-- <div class="ducku">
+        <h1>덕규</h1>
+        <h2>생일</h2>
+        <h2>축하해</h2>
+        <button type="button" class="like">축하</button> 
+        <p class="like_count">0</p>
+        
+
+      </div> -->
+      <div class="full_pepe">
+          <div class="pepe1">
+            <img src="img/pepe.jpeg"> 
+          </div>
+          <div class="pepe2" style="display: none;">
+            <img src="img/pepe2.jpg" >
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
