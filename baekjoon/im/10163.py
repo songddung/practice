@@ -4,7 +4,11 @@ for n in range(1, N+1):
     col, row, width, height = map(int, input().split())
 
     for r in range(row, row+height):
-        for c in range(col,col+width):
-            ar[r][c] = n
+        ar[r][col:col+width] = [n] * width
 
-for
+
+for n in range(1, N+1):
+    total = 0
+    for i in range(1001):
+        total += ar[i].count(n)
+    print(total)
