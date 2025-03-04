@@ -33,8 +33,8 @@ def solve():
     n, m = map(int,input().split())
     ar = [list(map(str, input())) for _ in range(n)]
     mx = 0
-    for i in range(0, n-2):  # 0 ~ 2
-        for j in range(i+1, n-1):  # ~ 3
+    for i in range(0, n-2):  # 0 ~ 1
+        for j in range(i+1, n-1):  # i+1 ~ 2
             total = 0
 
             for k in range(i+1):
