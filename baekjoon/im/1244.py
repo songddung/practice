@@ -1,3 +1,4 @@
+# 스위치 켜고 끄기
 N = int(input())
 ar = list(map(int, input().split()))
 T = int(input())

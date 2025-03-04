@@ -1,3 +1,5 @@
+# 줄세우기
+
 n = int(input())
 
 for _ in range(n):

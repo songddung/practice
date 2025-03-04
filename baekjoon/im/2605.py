@@ -1,3 +1,5 @@
+# 줄세우기
+
 n = int(input())
 ar = list(map(int, input().split()))
 arr = []

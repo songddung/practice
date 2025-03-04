@@ -1,3 +1,5 @@
+# 블랙잭
+
 N, M = map(int, input().split())
 ar = list(map(int, input().split()))
 arr = []

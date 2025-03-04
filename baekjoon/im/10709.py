@@ -1,3 +1,5 @@
+# 기상캐스터
+
 r, c = map(int, input().split())
 ar = []
 arr = [[-1] * c for _ in range(r)]

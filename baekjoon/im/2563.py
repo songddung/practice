@@ -1,3 +1,4 @@
+# 색종이
 ar = [[0] * 100 for _ in range(100)]
 
 n = int(input())

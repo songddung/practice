@@ -1,3 +1,5 @@
+# 종이자르기
+
 c , r = map(int, input().split())
 row = [0, r]
 col = [0, c]
