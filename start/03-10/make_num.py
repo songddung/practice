@@ -11,8 +11,6 @@ def calc(k, mid_sum):
         if mid_sum < mn:
             mn = mid_sum
 
-        return
-
     if operator[0] > 0:
         operator[0] -= 1
         calc(k+1, mid_sum + ar[k+1])
