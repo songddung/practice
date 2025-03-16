@@ -18,6 +18,8 @@ def solve():
         idx, v, *t = map(str, input().split())
         ar[int(idx)] = v
 
+    print(ar)
+
     return in_order(1, N, ar)
 
 for t in range(1, T+1):
