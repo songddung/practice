@@ -8,6 +8,7 @@ T = int(input())
 def solve(cnt, start):
     global mn
 
+    print(path)
     if cnt > len(ar):  #
         return
 
